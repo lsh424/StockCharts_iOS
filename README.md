@@ -1,13 +1,16 @@
 # StockCharts_iOS
 
-![](StockCharts_iOS_1.png)
+<img src="StockCharts_iOS_1.png" width="300">
 
-![](StockCharts_iOS_2.png)
+<img src="StockCharts_iOS_2.png" width="300">
 
 ## Requirements
 iOS 10+
 
-### 사용 기술: Swift, iOS, MVVM, AutoLayout, DataSourcePrefetching
 
-### 주가 정보 제공: https://www.alphavantage.co
+## OverView
+
+##### 사용 기술: Swift, iOS, MVVM, AutoLayout, DataSourcePrefetching
+
+##### 주가 정보 제공: https://www.alphavantage.co
 
