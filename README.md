@@ -1,6 +1,8 @@
 # StockCharts_iOS
 
-![](StockCharts_iOS.gif)
+![](StockCharts_iOS_1)
+
+![](StockCharts_iOS_2)
 
 ## Requirements
 iOS 10+
