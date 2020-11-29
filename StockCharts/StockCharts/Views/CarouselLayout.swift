@@ -48,8 +48,10 @@ class CarouselLayout: UICollectionViewFlowLayout {
     }
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        guard let attributes = super.layoutAttributesForElements(in: rect)
+        guard let superAttributes = super.layoutAttributesForElements(in: rect),
+            let attributes = NSArray(array: superAttributes, copyItems: true) as? [UICollectionViewLayoutAttributes]
             else { return nil }
+        
         return attributes.map({ self.transformLayoutAttributes(attributes: $0) })
     }
     
