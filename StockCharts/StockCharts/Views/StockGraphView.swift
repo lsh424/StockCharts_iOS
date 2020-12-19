@@ -18,17 +18,17 @@ class StockGraphView: UIView {
         static let colorAlpha: CGFloat = 0.3
         static let circleDiameter: CGFloat = 5.0
     }
-
+    
     @IBInspectable var startColor: UIColor = UIColor(hex: "#282830")
     @IBInspectable var middleColor: UIColor = UIColor(hex: "#282830")
     @IBInspectable var endColor: UIColor = UIColor(hex: "#282830")
     
     var graphPoints: [Float] = []
-
+    
     override func draw(_ rect: CGRect) {
         let width = rect.width
         let height = rect.height
-
+        
         let path = UIBezierPath(
             roundedRect: rect,
             byRoundingCorners: UIRectCorner.allCorners,
@@ -50,8 +50,8 @@ class StockGraphView: UIView {
             colorsSpace: colorSpace,
             colors: colors as CFArray,
             locations: colorLocations
-            ) else {
-                return
+        ) else {
+            return
         }
         
         var startPoint = CGPoint.zero

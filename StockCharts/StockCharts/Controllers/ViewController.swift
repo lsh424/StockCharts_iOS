@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     lazy var graphViewModels: [StockGraphViewModel?] = [StockGraphViewModel?](repeating: nil, count: 5)
     lazy var dataTasks : [URLSessionDataTask] = []
-
+    
     var companies: [String] = ["GOOGL", "TSLA", "DIS", "AAPL", "KO"]
     var companyColors: [[UIColor]] = [[UIColor(hex: "#4D7CE2"),UIColor(hex: "#E5B33D"),UIColor(hex: "#FF3B30")],[UIColor(hex: "#C63331"),UIColor(hex: "#A62E2A"),UIColor(hex: "#872624")],[UIColor(hex: "#050B2E"),UIColor(hex: "#122868"),UIColor(hex: "#234090")], [UIColor(hex: "#C1C9CA"),UIColor(hex: "#949494"),UIColor(hex: "#949494")], [UIColor(hex: "#BD393B"),UIColor(hex: "#B4373B"),UIColor(hex: "#963336")]]
     

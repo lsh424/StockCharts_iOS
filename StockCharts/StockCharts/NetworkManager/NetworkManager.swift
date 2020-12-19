@@ -15,6 +15,7 @@ class NetworkManager {
     private init() {}
     
     func fetchData(companies: [String], dataTasks: [URLSessionDataTask], index: Int, completion: @escaping (StockGraph?) -> Void) -> [URLSessionDataTask] {
+        
         let company = companies[index]
         var tasks = dataTasks
         
@@ -26,7 +27,7 @@ class NetworkManager {
             return tasks
         }
         
-        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
+        let dataTask = URLSession.shared.dataTask(with: url) { data, _, _ in
             guard let data = data else {
                 return
             }
