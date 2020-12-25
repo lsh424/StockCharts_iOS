@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -108,7 +109,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="tqt-0m-zVw" secondAttribute="trailing" constant="8" id="151-HW-8VX"/>
                                     <constraint firstAttribute="trailing" secondItem="m8u-R5-ckF" secondAttribute="trailing" constant="8" id="1qN-Z0-ydc"/>
@@ -154,13 +155,14 @@
                     </view>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="MLb-0Q-ptC"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="vtB-E0-6Ay" secondAttribute="trailing" id="D7K-gU-vnN"/>
                 <constraint firstItem="vtB-E0-6Ay" firstAttribute="top" secondItem="FuZ-R1-k3M" secondAttribute="top" id="h5g-K7-QM7"/>
                 <constraint firstItem="vtB-E0-6Ay" firstAttribute="leading" secondItem="FuZ-R1-k3M" secondAttribute="leading" id="kTt-7j-9pe"/>
                 <constraint firstAttribute="bottom" secondItem="vtB-E0-6Ay" secondAttribute="bottom" id="nCE-2x-e2S"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="MLb-0Q-ptC"/>
             <size key="customSize" width="390" height="251"/>
             <connections>
                 <outlet property="companyNameLabel" destination="7a7-Yw-0Id" id="Pih-xY-znm"/>

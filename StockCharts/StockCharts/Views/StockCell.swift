@@ -31,7 +31,6 @@ class StockCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
     func setupGraph(graphModel: StockGraphViewModel?) {
