@@ -12,10 +12,11 @@ class ViewController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     
-    lazy var graphViewModels: [StockGraphViewModel?] = [StockGraphViewModel?](repeating: nil, count: 5)
-    lazy var dataTasks : [URLSessionDataTask] = []
+    var graphViewModels: [StockGraphViewModel?] = [StockGraphViewModel?](repeating: nil, count: 5)
+    var dataTasks : [URLSessionDataTask] = []
     
     var companies: [String] = ["GOOGL", "TSLA", "DIS", "AAPL", "KO"]
+    
     var companyColors: [[UIColor]] = [[UIColor(hex: "#4D7CE2"),UIColor(hex: "#E5B33D"),UIColor(hex: "#FF3B30")],[UIColor(hex: "#C63331"),UIColor(hex: "#A62E2A"),UIColor(hex: "#872624")],[UIColor(hex: "#050B2E"),UIColor(hex: "#122868"),UIColor(hex: "#234090")], [UIColor(hex: "#C1C9CA"),UIColor(hex: "#949494"),UIColor(hex: "#949494")], [UIColor(hex: "#BD393B"),UIColor(hex: "#B4373B"),UIColor(hex: "#963336")]]
     
     override func viewDidLoad() {
@@ -73,7 +74,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             cell.indicator.startAnimating()
             cell.colors = nil
             cell.graphViewModel = nil
-            dataTasks = NetworkManager.shared.fetchData(companies: companies, dataTasks: dataTasks, index: indexPath.row) { (stockGraph) in
+            dataTasks = NetworkManager.shared.fetchData(companies: companies, dataTasks: dataTasks, index: indexPath.row) { [weak self] (stockGraph) in
                 guard let graph = stockGraph else {
                     DispatchQueue.main.async {
                         cell.noticeLabel.isHidden = false
@@ -81,13 +82,15 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
                     }
                     return}
                 
-                self.graphViewModels[indexPath.row] = StockGraphViewModel(strokcGraph: graph)
+                self?.graphViewModels[indexPath.row] = StockGraphViewModel(strokcGraph: graph)
                 
                 DispatchQueue.main.async {
                     let indexPath = IndexPath(row: indexPath.row, section: 0)
                     
-                    if self.collectionView.indexPathsForVisibleItems.contains(indexPath) {
-                        self.collectionView.reloadItems(at: [IndexPath(row: indexPath.row, section: 0)])
+                    guard let collectionView = self?.collectionView else {return}
+                    
+                    if collectionView.indexPathsForVisibleItems.contains(indexPath) {
+                        collectionView.reloadItems(at: [IndexPath(row: indexPath.row, section: 0)])
                     }
                 }
             }
@@ -99,16 +102,18 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
 extension ViewController: UICollectionViewDataSourcePrefetching {
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         for indexPath in indexPaths {
-            dataTasks = NetworkManager.shared.fetchData(companies: companies, dataTasks: dataTasks, index: indexPath.row) { (stockGraph) in
+            dataTasks = NetworkManager.shared.fetchData(companies: companies, dataTasks: dataTasks, index: indexPath.row) { [weak self] (stockGraph) in
                 guard let graph = stockGraph else {return}
                 
-                self.graphViewModels[indexPath.row] = StockGraphViewModel(strokcGraph: graph)
+                self?.graphViewModels[indexPath.row] = StockGraphViewModel(strokcGraph: graph)
                 
                 DispatchQueue.main.async {
                     let indexPath = IndexPath(row: indexPath.row, section: 0)
                     
-                    if self.collectionView.indexPathsForVisibleItems.contains(indexPath) {
-                        self.collectionView.reloadItems(at: [IndexPath(row: indexPath.row, section: 0)])
+                    guard let collectionView = self?.collectionView else {return}
+                    
+                    if collectionView.indexPathsForVisibleItems.contains(indexPath) {
+                        collectionView.reloadItems(at: [IndexPath(row: indexPath.row, section: 0)])
                     }
                 }
             }
