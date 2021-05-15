@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +25,7 @@
                                 <rect key="frame" x="5" y="5" width="380" height="241"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7a7-Yw-0Id">
-                                        <rect key="frame" x="8" y="8" width="58.5" height="21"/>
+                                        <rect key="frame" x="8" y="8" width="262" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="97I-yU-TfK"/>
                                         </constraints>
@@ -54,31 +54,31 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="b38-Hb-JmU">
                                         <rect key="frame" x="5" y="206" width="370" height="25"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7v-0J-Pxc">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="q7v-0J-Pxc" customClass="AdjustedLabel" customModule="StockCharts" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="28.5" height="25"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6x-v7-Xhw">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="O6x-v7-Xhw" customClass="AdjustedLabel" customModule="StockCharts" customModuleProvider="target">
                                                 <rect key="frame" x="85.5" y="0.0" width="28.5" height="25"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPr-R8-dPK">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="yPr-R8-dPK" customClass="AdjustedLabel" customModule="StockCharts" customModuleProvider="target">
                                                 <rect key="frame" x="171" y="0.0" width="28.5" height="25"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6P-zL-VGo">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="s6P-zL-VGo" customClass="AdjustedLabel" customModule="StockCharts" customModuleProvider="target">
                                                 <rect key="frame" x="256" y="0.0" width="28.5" height="25"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFa-3i-i8f">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="DFa-3i-i8f" customClass="AdjustedLabel" customModule="StockCharts" customModuleProvider="target">
                                                 <rect key="frame" x="341.5" y="0.0" width="28.5" height="25"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -89,7 +89,7 @@
                                             <constraint firstAttribute="height" constant="25" id="yXv-TW-BrT"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 100일" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8u-R5-ckF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 100일" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="m8u-R5-ckF" customClass="AdjustedLabel" customModule="StockCharts" customModuleProvider="target">
                                         <rect key="frame" x="300" y="8" width="72" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="R7A-X4-7Ma"/>
@@ -117,10 +117,11 @@
                                     <constraint firstItem="b38-Hb-JmU" firstAttribute="leading" secondItem="Qei-Ru-W5c" secondAttribute="leading" constant="5" id="3CW-HM-ccG"/>
                                     <constraint firstItem="7a7-Yw-0Id" firstAttribute="top" secondItem="Qei-Ru-W5c" secondAttribute="top" constant="8" id="77w-pi-bvV"/>
                                     <constraint firstAttribute="trailing" secondItem="b38-Hb-JmU" secondAttribute="trailing" constant="5" id="BFM-6m-2M2"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7a7-Yw-0Id" secondAttribute="trailing" constant="200" id="CFr-09-lsi"/>
                                     <constraint firstAttribute="trailing" secondItem="HB3-ps-SKB" secondAttribute="trailing" constant="8" id="WIa-vi-mNq"/>
+                                    <constraint firstItem="m8u-R5-ckF" firstAttribute="leading" secondItem="7a7-Yw-0Id" secondAttribute="trailing" constant="30" id="YMo-40-nrz"/>
                                     <constraint firstItem="m8u-R5-ckF" firstAttribute="centerY" secondItem="7a7-Yw-0Id" secondAttribute="centerY" id="bhy-4d-r4b"/>
                                     <constraint firstItem="b38-Hb-JmU" firstAttribute="top" secondItem="HB3-ps-SKB" secondAttribute="bottom" id="f79-z4-j83"/>
+                                    <constraint firstItem="m8u-R5-ckF" firstAttribute="width" secondItem="Qei-Ru-W5c" secondAttribute="width" multiplier="0.189474" id="hcM-lU-CQl"/>
                                     <constraint firstItem="7a7-Yw-0Id" firstAttribute="leading" secondItem="Qei-Ru-W5c" secondAttribute="leading" constant="8" id="s7Z-7L-w5X"/>
                                     <constraint firstAttribute="bottom" secondItem="b38-Hb-JmU" secondAttribute="bottom" constant="10" id="t5r-jF-E2a"/>
                                 </constraints>

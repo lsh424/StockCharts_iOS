@@ -28,18 +28,19 @@ class CarouselLayout: UICollectionViewFlowLayout {
         guard let collectionView = self.collectionView else {return}
         
         let collectionViewSize = collectionView.bounds.size
-        
+        let cellWidth = collectionView.frame.width * 0.84
+        self.itemSize = CGSize(width: cellWidth, height: cellWidth * 0.83)
         let xInset = (collectionViewSize.width - self.itemSize.width) / 2
         let yInset = (collectionViewSize.height - self.itemSize.height) / 2
         
         self.sectionInset = UIEdgeInsets(top: yInset, left: xInset, bottom: yInset, right: xInset)
         
         let itemWidth = self.itemSize.width
-        
-        
+        self.sideItemScale = 0.8
+        self.spacing = -(cellWidth/3)
         let scaledItemOffset =  (itemWidth - itemWidth*self.sideItemScale) / 2
         self.minimumLineSpacing = spacing - scaledItemOffset
-        
+        self.isPagingEnabled = true
         self.scrollDirection = .horizontal
     }
     

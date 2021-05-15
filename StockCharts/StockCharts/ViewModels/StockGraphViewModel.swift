@@ -11,7 +11,7 @@ import UIKit
 // MARK: - StockGraphViewModel
 class StockGraphViewModel {
     let strokcGraph: StockGraph
-    
+
     init(strokcGraph: StockGraph){
         self.strokcGraph = strokcGraph
     }

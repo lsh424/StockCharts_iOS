@@ -21,6 +21,7 @@
 		D14B49562566A55600039F15 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14B49552566A55600039F15 /* NetworkManager.swift */; };
 		D14B49582566A59400039F15 /* StockGraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14B49572566A59400039F15 /* StockGraphModel.swift */; };
 		D14B495A2566A5C000039F15 /* StockGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14B49592566A5C000039F15 /* StockGraphViewModel.swift */; };
+		D16F4A48264FCABA00F744E7 /* AdjustedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16F4A47264FCABA00F744E7 /* AdjustedLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D14B49552566A55600039F15 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D14B49572566A59400039F15 /* StockGraphModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockGraphModel.swift; sourceTree = "<group>"; };
 		D14B49592566A5C000039F15 /* StockGraphViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockGraphViewModel.swift; sourceTree = "<group>"; };
+		D16F4A47264FCABA00F744E7 /* AdjustedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustedLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				D14B49372566A15A00039F15 /* Info.plist */,
+				D16F4A49264FCB4700F744E7 /* Support */,
 				D14B493D2566A29400039F15 /* Resources */,
 				D14B493E2566A2A400039F15 /* Extensions */,
 				D14B493F2566A2B300039F15 /* AppDelegate */,
@@ -155,6 +158,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		D16F4A49264FCB4700F744E7 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				D16F4A47264FCABA00F744E7 /* AdjustedLabel.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,7 +193,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = LSH;
 				TargetAttributes = {
 					D14B49252566A15300039F15 = {
@@ -231,6 +242,7 @@
 				D14B492A2566A15300039F15 /* AppDelegate.swift in Sources */,
 				D14B49542566A52C00039F15 /* StockGraphView.swift in Sources */,
 				D14B49512566A4CA00039F15 /* StockCell.swift in Sources */,
+				D16F4A48264FCABA00F744E7 /* AdjustedLabel.swift in Sources */,
 				D14B49582566A59400039F15 /* StockGraphModel.swift in Sources */,
 				D14B49562566A55600039F15 /* NetworkManager.swift in Sources */,
 				D14B495A2566A5C000039F15 /* StockGraphViewModel.swift in Sources */,
@@ -313,7 +325,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -368,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

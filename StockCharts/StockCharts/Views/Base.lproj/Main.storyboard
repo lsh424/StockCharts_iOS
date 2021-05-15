@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="65H-oE-g4R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="65H-oE-g4R">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +20,7 @@
                                 <rect key="frame" x="30" y="168" width="354" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="I5C-t0-jDN"/>
+                                    <constraint firstAttribute="width" secondItem="PW2-vs-yfV" secondAttribute="height" multiplier="59:50" id="wap-jN-UbH"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B1q-g5-fMM">
                                     <size key="itemSize" width="128" height="128"/>
@@ -36,16 +37,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="dy1-bS-oXb"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="PW2-vs-yfV" firstAttribute="leading" secondItem="dy1-bS-oXb" secondAttribute="leading" constant="30" id="QOE-U6-HNh"/>
+                            <constraint firstItem="PW2-vs-yfV" firstAttribute="width" secondItem="Z9s-sX-dT9" secondAttribute="width" multiplier="0.855072" id="3fF-Ir-csZ"/>
+                            <constraint firstItem="PW2-vs-yfV" firstAttribute="centerX" secondItem="dy1-bS-oXb" secondAttribute="centerX" id="Pzu-Xe-9vN"/>
                             <constraint firstItem="nPr-x5-86h" firstAttribute="leading" secondItem="dy1-bS-oXb" secondAttribute="leading" constant="30" id="T5v-ob-QpS"/>
                             <constraint firstItem="PW2-vs-yfV" firstAttribute="top" secondItem="dy1-bS-oXb" secondAttribute="top" constant="80" id="VNa-6M-gjj"/>
-                            <constraint firstItem="dy1-bS-oXb" firstAttribute="trailing" secondItem="PW2-vs-yfV" secondAttribute="trailing" constant="30" id="dNE-We-3F2"/>
                             <constraint firstItem="dy1-bS-oXb" firstAttribute="trailing" secondItem="nPr-x5-86h" secondAttribute="trailing" constant="30" id="see-D3-IaA"/>
                             <constraint firstItem="nPr-x5-86h" firstAttribute="top" secondItem="PW2-vs-yfV" secondAttribute="bottom" constant="80" id="trw-im-I3T"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="dy1-bS-oXb"/>
                     </view>
                     <navigationItem key="navigationItem" id="Elv-l4-6bl"/>
                     <connections>

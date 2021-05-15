@@ -8,6 +8,29 @@
 
 import UIKit
 
+enum Company: String {
+    case google = "GOOGL"
+    case tesla = "TSLA"
+    case disney = "DIS"
+    case apple = "AAPL"
+    case cocacola = "KO"
+    
+    var colors: [UIColor] {
+        switch self {
+        case .google:
+            return [UIColor(hex: "#4D7CE2"),UIColor(hex: "#E5B33D"),UIColor(hex: "#FF3B30")]
+        case .tesla:
+            return [UIColor(hex: "#C63331"),UIColor(hex: "#A62E2A"),UIColor(hex: "#872624")]
+        case .disney:
+            return [UIColor(hex: "#050B2E"),UIColor(hex: "#122868"),UIColor(hex: "#234090")]
+        case .apple:
+            return [UIColor(hex: "#C1C9CA"),UIColor(hex: "#949494"),UIColor(hex: "#949494")]
+        case .cocacola:
+            return [UIColor(hex: "#BD393B"),UIColor(hex: "#B4373B"),UIColor(hex: "#963336")]
+        }
+    }
+}
+
 class StockCell: UICollectionViewCell {
     
     @IBOutlet weak var containerView: UIView!
@@ -21,10 +44,19 @@ class StockCell: UICollectionViewCell {
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var noticeLabel: UILabel!
     
-    lazy var colors: [UIColor]? = []
-    
+    lazy var company: Company? = nil
+
     var graphViewModel: StockGraphViewModel? {
-        didSet{
+        didSet {
+            guard let graphViewModel = graphViewModel else {
+                self.indicator.startAnimating()
+                self.company = nil
+                self.graphViewModel = nil
+                return
+            }
+            self.indicator.stopAnimating()
+            self.noticeLabel.isHidden = true
+            self.company = Company(rawValue: graphViewModel.companyName)
             setupGraph(graphModel: graphViewModel)
         }
     }
@@ -59,7 +91,7 @@ class StockCell: UICollectionViewCell {
         
         stockGraphView.graphPoints = viewModel.graphData.1
         
-        if let colors = colors {
+        if let colors = company?.colors {
             stockGraphView.startColor = colors[0]
             stockGraphView.middleColor = colors[1]
             stockGraphView.endColor = colors[2]
